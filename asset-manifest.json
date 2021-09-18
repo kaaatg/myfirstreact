@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/kaaatg/myfirstreact.git/static/css/main.a617e044.chunk.css",
+    "main.js": "/kaaatg/myfirstreact.git/static/js/main.083d89a4.chunk.js",
+    "main.js.map": "/kaaatg/myfirstreact.git/static/js/main.083d89a4.chunk.js.map",
+    "runtime-main.js": "/kaaatg/myfirstreact.git/static/js/runtime-main.6f9f0749.js",
+    "runtime-main.js.map": "/kaaatg/myfirstreact.git/static/js/runtime-main.6f9f0749.js.map",
+    "static/js/2.278db9fa.chunk.js": "/kaaatg/myfirstreact.git/static/js/2.278db9fa.chunk.js",
+    "static/js/2.278db9fa.chunk.js.map": "/kaaatg/myfirstreact.git/static/js/2.278db9fa.chunk.js.map",
+    "static/js/3.9d3e767b.chunk.js": "/kaaatg/myfirstreact.git/static/js/3.9d3e767b.chunk.js",
+    "static/js/3.9d3e767b.chunk.js.map": "/kaaatg/myfirstreact.git/static/js/3.9d3e767b.chunk.js.map",
+    "index.html": "/kaaatg/myfirstreact.git/index.html",
+    "static/css/main.a617e044.chunk.css.map": "/kaaatg/myfirstreact.git/static/css/main.a617e044.chunk.css.map",
+    "static/js/2.278db9fa.chunk.js.LICENSE.txt": "/kaaatg/myfirstreact.git/static/js/2.278db9fa.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/kaaatg/myfirstreact.git/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6f9f0749.js",
+    "static/js/2.278db9fa.chunk.js",
+    "static/css/main.a617e044.chunk.css",
+    "static/js/main.083d89a4.chunk.js"
+  ]
+}
