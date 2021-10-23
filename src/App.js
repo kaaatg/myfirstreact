@@ -1,6 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import Greet from './components/Greet';
+import Message from './components/Greet';
+import Button from './components/Greet';
 
 function App() {
   return (
@@ -8,9 +10,9 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-        <Greet/>
-          Edit <code>src/App.js</code> and save to reload. BLACKPINK IN YOUR AREA !
+            Edit <code>src/App.js</code> and save to reload. BLACKPINK IN YOUR AREA !
         </p>
+        <Greet/>
         <a
           className="App-link"
           href="https://reactjs.org"
