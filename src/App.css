@@ -2,44 +2,38 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.react-typewriter-text {
+  padding: 0;
+  margin: 0;
+  text-align: left;
 }
 
-.typewriter {
-    font-family: Courier, monospace;
-	display: inline-block;
+.react-typewriter-pointer {
+  background-color: black;
+  display: inline;
+  padding: 0 1px;
 }
 
-.typewriter-text {
-    display: inline-block;
-  	overflow: hidden;
-  	letter-spacing: 2px;
- 	animation: typing 5s steps(30, end), blink .75s step-end infinite;
-    white-space: nowrap;
-    font-size: 30px;
-    font-weight: 700;
-    border-right: 4px solid orange;
-    box-sizing: border-box;
-}
-
-@keyframes typing {
-    from { 
-        width: 0% 
-    }
-    to { 
-        width: 100% 
-    }
+.add-cursor-animate {
+    animation: blink 1s step-end infinite;
 }
 
 @keyframes blink {
-    from, to { 
-        border-color: transparent 
-    }
-    50% { 
-        border-color: orange; 
-    }
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.hide-typing-cursor {
+    padding: 0;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {

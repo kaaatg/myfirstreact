@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Greet from './components/Greet';
 import Button from './components/Button';
+import TypeWriterEffect from 'react-typewriter-effect';
 
 function App() {
   return (
@@ -11,7 +12,13 @@ function App() {
         <p>
             Edit <code>src/App.js</code> and save to reload.
         </p>
-        <Greet/>
+        <TypeWriterEffect
+            textStyle={{ fontFamily: 'Courier New' }}
+            startDelay={0}
+            cursorColor="black"
+            text="HI REACT, WELCOME TO MY GUYS !"
+            typeSpeed={100}
+          />
         <Button/>
         <a
           className="App-link"
