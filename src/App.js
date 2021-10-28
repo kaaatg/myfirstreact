@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Greet from './components/Greet';
-import Button from './components/Greet';
+import Button from './components/Button';
 
 function App() {
   return (
@@ -12,7 +12,6 @@ function App() {
             Edit <code>src/App.js</code> and save to reload.
         </p>
         <Greet/>
-        
         <Button/>
         <a
           className="App-link"

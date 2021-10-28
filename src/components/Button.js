@@ -2,11 +2,30 @@ import React from "react";
 
 class Button extends React.Component {
     
+    constructor() {
+        super ()
+        this.state = {
+            count : 0
+        }
+    }
+    
+    addCounter() {
+        this.setState(
+            {
+                count : this.state.count + 1
+            }
+        )
+    }
+    
     render() {
-        return <button>Click all you can~></button>
+        return(
+            <div>
+                <button onClick = {() => this.addCounter()}>Click all you can~></button>
+                <p>counts = {this.state.count}</p>
+            </div>
+        )
     }
     
 }
 
-export default Button
-    
+export default Button 
