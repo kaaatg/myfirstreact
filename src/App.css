@@ -2,10 +2,6 @@
   text-align: center;
 }
 
-.TypeWriterEffect {
-    animation: blink 1s step-end infinite;
-}
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -29,6 +25,12 @@
   color: black;
 }
 
+.TypeWriterEffect {
+ animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
 .App-link {
   color: #000000;
 }
@@ -40,4 +42,22 @@
   to {
     transform: rotate(360deg);
   }
+  
+ @keyframes typing {
+  from { 
+    width: 0 
+  }
+  to { 
+    width: 100% 
+  }
+}
+
+@keyframes blink-caret {
+  from, to { 
+    border-color: transparent 
+  }
+  50% { 
+    border-color: orange; 
+  }
+}
 }
