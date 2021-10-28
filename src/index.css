@@ -8,3 +8,11 @@ body {
 code {
   font-family: 'Courier New';
 }
+
+ .glitch {
+    position: relative;
+    color: white;
+    font-size: 4em;
+    letter-spacing: .5em;
+    animation: glitch-skew 1s infinite linear alternate-reverse;
+}

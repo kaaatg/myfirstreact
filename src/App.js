@@ -10,7 +10,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-            Edit <code>src/App.js</code> and save to reload. BLACKPINK IN YOUR AREA !
+            Edit <code>src/App.js</code> and save to reload.
         </p>
         <Greet/>
         <a
