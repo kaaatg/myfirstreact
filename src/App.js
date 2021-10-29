@@ -13,11 +13,11 @@ function App() {
             Edit <code>src/App.js</code> and save to reload.
         </p>
         <TypeWriterEffect
-            textStyle={{ fontFamily: 'Courier New' }}
-            startDelay={0}
+            textStyle={{fontFamily: 'Courier New'}}
+            startDelay={250}
             cursorColor="black"
-            text="HI REACT, WELCOME TO MY GUYS !"
-            typeSpeed={100}
+            text="HI GUYS, WELCOME TO MY REACT !"
+            typeSpeed={250}
           />
         <Button/>
         <a

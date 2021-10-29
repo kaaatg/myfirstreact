@@ -25,11 +25,6 @@
   color: black;
 }
 
-.react-typewriter-text {
- animation: 
-    typing 3.5s steps(40, end);
-}
-
 .App-link {
   color: #000000;
 }
@@ -41,13 +36,4 @@
   to {
     transform: rotate(360deg);
   }
-  
- @keyframes typing {
-  from width { 
-    transform: 0 
-  }
-  to width { 
-    transform: 100% 
-  }
-}
 }
