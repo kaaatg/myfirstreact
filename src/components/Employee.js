@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react"
 import employeeService from "../services/employeeService"
+import './Employee.css';
 
 const Employee = () =>{
     
@@ -48,4 +49,4 @@ const Employee = () =>{
     )
 }
 
-export default Employee
+export default Employee;
