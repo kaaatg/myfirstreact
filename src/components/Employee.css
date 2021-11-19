@@ -1,0 +1,29 @@
+#employee {
+    font-size: 20px;
+    color: white;
+    margin: -20px 0 0 0;
+    line-height: 30px;
+}
+
+#employee h2 {
+    font-size: 30px;
+    color: rgba(185, 45, 122, 0.849);
+    margin-bottom: 1cm;
+    text-shadow: -1px -1px 0 rgba(184, 184, 184, 0.795),
+                    1px -1px 0 rgba(184, 184, 184, 0.795),
+                    -1px 1px 0 rgba(184, 184, 184, 0.795),
+                    1px 1px 0 rgba(184, 184, 184, 0.795);            
+}
+
+#employee td {
+    font-size: 15px;
+    padding: 5px 45px 5px 45px;
+}
+
+#employee tr:nth-child(even) {
+    background: rgba(143, 110, 130, 0.514);
+}
+
+#employee tr:nth-child(1) {
+    background: rgba(175, 77, 126, 0.829);
+}

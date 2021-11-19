@@ -11,25 +11,25 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
         <TypeWriterEffect
-            textStyle={{
-                fontFamily: 'Courier New',
-                color: 'white',
-                fontweight: 500,
-                fontsize: '1.5em',
-            }}
-            startDelay={2000}
-            cursorColor="white"
-            multitext={[
-                'HI GUYS :)',
-                'WELCOME TO MY REACT !',
-                'hello spring boot xD',
-            ]}
-            multiTextDelay={1000}
-            typeSpeed={30}
-            /></p>
-        <p>{Hello()}</p>
+        textStyle={{
+          fontFamily: 'Courier New',
+          color: '#ffffff',
+          fontWeight: 5000,
+          fontSize: '2em',
+        }}
+        startDelay={500}
+        cursorColor="#ffffff"
+        multiText={[
+          'Hey there, everyone :)',
+          'This is made by Katrina',
+          'Welcome to my React',
+          'and hello Spring Boot!',
+          'Hope yall liked it, UWU',
+        ]}
+        multiTextDelay={1500}
+        typeSpeed={150}
+      />
         <Employee/>
         <Button/>
         <a

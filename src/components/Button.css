@@ -1,0 +1,14 @@
+#button {
+    background-color: rgb(192, 89, 140, 0.85);
+    border: none;
+    color: white;
+    width: 20ch;
+    height: 4ch;
+    font-family: 'Courier New', Helvetica, sans-serif;
+    font-size: .65em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-table;
+    margin: 2px .25in 0 .25in;
+    cursor: pointer;
+}
