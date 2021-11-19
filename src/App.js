@@ -31,8 +31,11 @@ function App() {
         multiTextDelay={1500}
         typeSpeed={150}
       />
-        <Employee/>
-        <Button/>
+              
+        <Employee />
+        
+        <Button />
+        
         <a
           className="App-link"
           href="https://reactjs.org"
