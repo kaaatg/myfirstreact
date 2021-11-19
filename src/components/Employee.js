@@ -36,8 +36,8 @@ const Employee = () =>{
                             employee => (
                                 <tr>
                                     <td>{employee.name}</td>
-                                    <td>{employee.department}</td>
                                     <td>{employee.location}</td>
+                                    <td>{employee.department}</td>
                                 </tr>
                             )
                         )
