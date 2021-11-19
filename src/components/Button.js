@@ -21,7 +21,8 @@ class Button extends React.Component {
     render() {
         return(
             <div>
-                <button onClick = {() => this.addCounter()}>Click all you can~</button>
+                <button id ="button"
+                onClick = {() => this.addCounter()}>Click all you can~</button>
                 <p>counts = {this.state.count}</p>
             </div>
         )
