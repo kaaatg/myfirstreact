@@ -23,7 +23,7 @@ const Employee = () =>{
     )
     
     return(
-        <div>
+            <div id="employee">
             <h3>List of Employees</h3>
             <div>
                 <table border = "1.5">

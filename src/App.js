@@ -15,12 +15,12 @@ function App() {
         <TypeWriterEffect
         textStyle={{
           fontFamily: 'Courier New',
-          color: '#ffffff',
+          color: 'white',
           fontWeight: 5000,
           fontSize: '2em',
         }}
         startDelay={500}
-        cursorColor="#ffffff"
+        cursorColor="white"
         multiText={[
           'Hey there, everyone :)',
           'This is made by Katrina',

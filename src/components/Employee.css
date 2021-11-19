@@ -1,22 +1,18 @@
 #employee {
     font-size: 20px;
     color: white;
-    margin: -20px 0 0 0;
+    margin: -20px 2 1 1;
     line-height: 30px;
 }
 
-#employee h2 {
-    font-size: 30px;
-    color: rgba(185, 45, 122, 0.849);
-    margin-bottom: 1cm;
-    text-shadow: -1px -1px 0 rgba(184, 184, 184, 0.795),
-                    1px -1px 0 rgba(184, 184, 184, 0.795),
-                    -1px 1px 0 rgba(184, 184, 184, 0.795),
-                    1px 1px 0 rgba(184, 184, 184, 0.795);            
+#employee h3 {
+    font-size: 40px;
+    color: white;
+    margin-bottom: 0.80cm;        
 }
 
 #employee td {
-    font-size: 15px;
+    font-size: 20px;
     padding: 5px 45px 5px 45px;
 }
 
@@ -25,5 +21,5 @@
 }
 
 #employee tr:nth-child(1) {
-    background: rgba(175, 77, 126, 0.829);
+    background: rgb(147, 123, 191);
 }
