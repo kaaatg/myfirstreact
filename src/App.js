@@ -11,6 +11,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <p>
         <TypeWriterEffect
             textStyle={{
                 fontFamily: 'Courier New',
@@ -18,7 +19,7 @@ function App() {
                 fontweight: 500,
                 fontsize: '1.5em',
             }}
-            startDelay={250}
+            startDelay={2000}
             cursorColor="white"
             multitext={[
                 'HI GUYS :)',
@@ -27,7 +28,7 @@ function App() {
             ]}
             multiTextDelay={1000}
             typeSpeed={30}
-          />
+            /></p>
         <p>{Hello()}</p>
         <Employee/>
         <Button/>
