@@ -3,7 +3,8 @@ import './App.css';
 import Greet from './components/Greet';
 import Button from './components/Button';
 import TypeWriterEffect from 'react-typewriter-effect';
-import hello from './components/hello';
+import Hello from './components/Hello';
+import Employee from './components/Employee';
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
         <p>
             Edit <code>src/App.js</code> and save to reload.
         </p>
-        <p>{hello}</p>
+        <p>{Hello()}</p>
+        <Employee/>
         <TypeWriterEffect
             textStyle={{fontFamily: 'Courier New'}}
             startDelay={250}
