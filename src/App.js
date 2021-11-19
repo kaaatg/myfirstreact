@@ -11,18 +11,25 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-            Edit <code>src/App.js</code> and save to reload.
-        </p>
+        <TypeWriterEffect
+            textStyle={{
+                fontFamily: 'Courier New',
+                color: 'white',
+                fontweight: 500,
+                fontsize: '1.5em',
+            }}
+            startDelay={250}
+            cursorColor="white"
+            multitext={[
+                'HI GUYS :)',
+                'WELCOME TO MY REACT !',
+                'hello spring boot xD',
+            ]}
+            multiTextDelay={1000}
+            typeSpeed={30}
+          />
         <p>{Hello()}</p>
         <Employee/>
-        <TypeWriterEffect
-            textStyle={{fontFamily: 'Courier New'}}
-            startDelay={250}
-            cursorColor="black"
-            text="HI GUYS, WELCOME TO MY REACT !"
-            typeSpeed={250}
-          />
         <Button/>
         <a
           className="App-link"
@@ -30,7 +37,6 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
         </a>
       </header>
     </div>
