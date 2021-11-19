@@ -26,7 +26,7 @@ const Employee = () =>{
         <div>
             <h3>List of Employees</h3>
             <div>
-                <table border = "1">
+                <table border = "1.5">
                     <tr>
                         <td>Name</td>
                         <td>Location</td>
@@ -49,4 +49,4 @@ const Employee = () =>{
     )
 }
 
-export default Employee;
+export default Employee
