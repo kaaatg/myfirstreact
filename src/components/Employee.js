@@ -26,12 +26,15 @@ const Employee = () =>{
             <div id="employee">
             <h3>List of Employees</h3>
             <div>
-                <table border = "1.5">
-                    <tr>
-                        <td>Name</td>
-                        <td>Location</td>
-                        <td>Department</td>
-                    </tr>
+                <table className="table table-hover table-light table-striped>
+                    <thead>
+                        <tr className="table-primary">
+                            <td>Name</td>
+                            <td>Location</td>
+                            <td>Department</td>
+                        </tr>
+                    </thead>
+                    <tbody>
                     {
                         employees.map(
                             employee => (
@@ -43,6 +46,7 @@ const Employee = () =>{
                             )
                         )
                     }
+                    </tbody>
                 </table>
             </div>
         </div>
