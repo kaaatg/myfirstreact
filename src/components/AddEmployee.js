@@ -1,5 +1,5 @@
-import {useState} from "react"
-import {useNavigate} from 'react-router'
+import {useState, useEffect} from "react"
+import {useNavigate, useParams} from 'react-router'
 import employeeService from "../services/employeeService";
 
 const AddEmployee = () => {
@@ -7,26 +7,64 @@ const AddEmployee = () => {
     const [location, setLocation] = useState("");
     const [department, setDepartment] = useState("");
     const navigate = useNavigate();
-
+    const {employeeId} = useParams();
+    
+    useEffect(() =>{
+        if(employeeId){
+            employeeService.getEmployee(employeeId)
+                .then(
+                    response =>{
+                        setName(response.data.name);
+                        setLocation(response.data.location);
+                        setDepartment(response.data.department);
+                    }
+                )
+            
+                .catch(
+                    error =>{
+                        console.error("Error!")
+                    }
+                )
+        }    
+    },[])  
     
     const saveEmployee = (e) => {
         e.preventDefault();
         
-        const employee = {name, location, department};
-        employeeService.postEmployee(employee)
-        .then(
-            response => {
-                console.log('updated employee!', response.data)
-                navigate('/employee')
-            }
-        )
+        if(employeeId){
+            const employee = {employeeId, name, location, department};
+            employeeService.putEmployee(employee)
+            .then(
+                response => {
+                    console.log('Updated employee!', response.data)
+                    navigate('/employee')
+                }
+            )
 
-        .catch(
-            error => {
-                console.error('something went wrong >:(')
-            }
-        )
-}
+            .catch(
+                error => {
+                    console.error('something went wrong >:(')
+                }
+            )    
+        }
+        
+        else{
+            const employee = {name, location, department};
+            employeeService.postEmployee(employee)
+            .then(
+                response => {
+                    console.log('Added new employee!', response.data)
+                    navigate('/employee')
+                }
+            )
+
+            .catch(
+                error => {
+                    console.error('something went wrong >:(')
+                }
+            )
+        }
+    }
 
 return(
     <div className="container">

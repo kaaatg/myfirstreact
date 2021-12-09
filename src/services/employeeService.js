@@ -12,8 +12,8 @@ const putEmployee = (data) =>{
     return httpclient.put('/employees', data)
 }
 
-const getEmployee = (id) =>{
-    return httpclient.get('/employees/${id}')
+const getEmployee = (employeeId) =>{
+    return httpclient.get('/employees/${employeeId}')
 }
 
 export default {getEmployees, postEmployee, putEmployee, getEmployee}

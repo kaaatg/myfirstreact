@@ -40,7 +40,7 @@ const Employee = () =>{
                     {
                         employees.map(
                             employee => (
-                                <tr>
+                                <tr key = {employee.employeeId}>
                                     <td>{employee.name}</td>
                                     <td>{employee.location}</td>
                                     <td>{employee.department}</td>
