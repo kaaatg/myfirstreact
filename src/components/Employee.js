@@ -5,7 +5,7 @@ import './Employee.css';
 
 const Employee = () =>{
     
-    const[employees, setEmployees] = useState([])
+    const[employees, setEmployees] = useState([]);
     
     useEffect(() =>{
         refreshEmployeeTable(); 
@@ -67,7 +67,7 @@ const Employee = () =>{
                                         <div className="d-grid gap-2 d-md-flex">
                                             <Link 
                                             className="btn btn primary" 
-                                            to={'/employees/edit/${employee.employeeId}'}>Update</Link>
+                                            to={"/employees/edit/${employee.employeeId}"}>Update</Link>
                                             <button 
                                             className="btn btn danger" onClick={() =>deleteEmployee(employee.employee.Id)}>Delete</button>
                                         </div>

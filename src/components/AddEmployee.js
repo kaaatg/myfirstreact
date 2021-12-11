@@ -22,7 +22,7 @@ const AddEmployee = () => {
             
             .catch(
                 error =>{
-                    console.error("Something went wrong >:(", error)
+                    console.error("Something went wrong >:(", error);
                 }
             )
         }   
@@ -36,19 +36,20 @@ const AddEmployee = () => {
             employeeService.putEmployee(employee)
             .then(
                 response => {
-                    console.log('Updated employee!', response.data)
+                    console.log('Updated employee!', response.data);
                     navigate('/employee')
                 }
             )
 
             .catch(
                 error => {
-                    console.error('Something went wrong >:(')
+                    console.error('Something went wrong >:(', error);
                 }
             )    
         }
         
         else{
+            const employee = {name, location, department};
             employeeService.postEmployee(employeeId)
             .then(
                 response => {
@@ -59,7 +60,7 @@ const AddEmployee = () => {
 
             .catch(
                 error => {
-                    console.log('something went wrong >:(')
+                    console.log('something went wrong >:(');
                 }
             )
         }
@@ -78,7 +79,7 @@ return(
                 placeholder="Add employee name"
                 onChange={
                     (e) => {
-                       setName(e.target.value)
+                       setName(e.target.value);
                     }
                 }
                 />
@@ -93,7 +94,7 @@ return(
                 placeholder="Add employee location"
                 onChange={
                     (e) => {
-                        setLocation(e.target.value)
+                        setLocation(e.target.value);
                     }
                 }
                 />
@@ -108,7 +109,7 @@ return(
                 placeholder="Add employee department"
                 onChange={
                     (e) => {
-                        setDepartment(e.target.value)
+                        setDepartment(e.target.value);
                     }
                 }
                 />

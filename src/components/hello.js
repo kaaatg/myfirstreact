@@ -3,15 +3,15 @@ import helloServices from "../services/helloServices";
 
 const Hello = () =>{
     
-    const[hello, setHello] = useState("")
+    const[hello, setHello] = useState("");
     
     useEffect( () =>{
         helloServices.getHello()
         .then(response => {
-            setHello(response.data)
+            setHello(response.data);
         })
         .catch(err => {
-            console.log("something went wrong!")
+            console.log("something went wrong!");
         })
     }
     )
