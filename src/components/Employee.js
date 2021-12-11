@@ -7,21 +7,40 @@ const Employee = () =>{
     
     const[employees, setEmployees] = useState([])
     
-    useEffect(
-        () =>{
-            employeeService.getEmployees()
-            .then(
-                response =>{
-                    setEmployees(response.data)
-                }
-            )
-            .catch(
-                () =>{
-                    console.log("Something went wrong >:(")
-                }
-            )
-        }
-    )
+    useEffect(() =>{
+        refreshEmployeeTable(); 
+    })     
+    
+    const refreshEmployeeTable = () => {
+        employeeService.getEmployees()
+        .then(
+            response =>{
+                setEmployees(response.data);
+            }
+        )
+    
+        .catch(
+            err =>{
+                console.log("Something went wrong >:(");
+            }
+        )
+    }
+    
+    const deleteEmployee = (employeeId) =>{
+        employeeService.deleteEmployee(employeeId)
+        .then(
+            response =>{
+                console.log("Successfully deleted employee!");
+                refreshEmployeeTable();
+            }
+        )
+        
+        .catch(
+            error =>{
+                console.error("Something went wrong >:(", error);
+            }
+        )
+    }
     
     return(
             <div className="container">
@@ -45,9 +64,13 @@ const Employee = () =>{
                                     <td>{employee.location}</td>
                                     <td>{employee.department}</td>
                                     <td>
-                                    <Link 
-                                    className="btn btn primary" 
-                                    to={"/edit/${employee.employeeId}"}>Update</Link>
+                                        <div className="d-grid gap-2 d-md-flex">
+                                            <Link 
+                                            className="btn btn primary" 
+                                            to={'/employees/edit/${employee.employeeId}'}>Update</Link>
+                                            <button 
+                                            className="btn btn danger" onClick={() =>deleteEmployee(employee.employee.Id)}>Delete</button>
+                                        </div>
                                     </td>
                                 </tr>
                             )

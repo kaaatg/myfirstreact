@@ -12,21 +12,21 @@ const AddEmployee = () => {
     useEffect(() =>{
         if(employeeId){
             employeeService.getEmployee(employeeId)
-                .then(
-                    response =>{
-                        setName(response.data.name);
-                        setLocation(response.data.location);
-                        setDepartment(response.data.department);
-                    }
-                )
+            .then(
+                employee =>{
+                    setName(employee.data.name);
+                    setLocation(employee.data.location);
+                    setDepartment(employee.data.department);
+                }
+            )
             
-                .catch(
-                    error =>{
-                        console.error("Error!")
-                    }
-                )
-        }    
-    },[])  
+            .catch(
+                error =>{
+                    console.error("Something went wrong >:(", error)
+                }
+            )
+        }   
+    },[])
     
     const saveEmployee = (e) => {
         e.preventDefault();
@@ -43,24 +43,23 @@ const AddEmployee = () => {
 
             .catch(
                 error => {
-                    console.error('something went wrong >:(')
+                    console.error('Something went wrong >:(')
                 }
             )    
         }
         
         else{
-            const employee = {name, location, department};
-            employeeService.postEmployee(employee)
+            employeeService.postEmployee(employeeId)
             .then(
                 response => {
-                    console.log('Added new employee!', response.data)
-                    navigate('/employee')
+                    console.log('Employee added!');
+                    navigate('/employee');
                 }
             )
 
             .catch(
                 error => {
-                    console.error('something went wrong >:(')
+                    console.log('something went wrong >:(')
                 }
             )
         }
@@ -71,11 +70,11 @@ return(
         <h3>Add employee</h3>
         <form>
             <div className="mb-3">
-                <label for="name" className="form-label">Name</label>
+                <label for="nameField" className="form-label">Name</label>
                 <input 
                 type="text" 
                 className="form-control"
-                id="name" 
+                id="nameField" 
                 placeholder="Add employee name"
                 onChange={
                     (e) => {
@@ -86,11 +85,11 @@ return(
             </div>
             
             <div className="mb-3">
-                <label for="location" className="form-label">Location</label>
+                <label for="locationField" className="form-label">Location</label>
                 <input 
                 type="text" 
                 className="form-control"
-                id="location" 
+                id="locationField" 
                 placeholder="Add employee location"
                 onChange={
                     (e) => {
@@ -101,11 +100,11 @@ return(
             </div>
             
             <div className="mb-3">
-                <label for="department" className="form-label">Department</label>
+                <label for="departmentField" className="form-label">Department</label>
                 <input 
                 type="text" 
                 className="form-control"
-                id="department" 
+                id="departmentField" 
                 placeholder="Add employee department"
                 onChange={
                     (e) => {
