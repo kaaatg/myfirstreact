@@ -30,7 +30,7 @@ const Employee = () =>{
         employeeService.deleteEmployee(employeeId)
         .then(
             response =>{
-                console.log("Successfully deleted employee!");
+                console.log("Successfully deleted the employee!");
                 refreshEmployeeTable();
             }
         )
@@ -52,7 +52,7 @@ const Employee = () =>{
                             <td>Name</td>
                             <td>Location</td>
                             <td>Department</td>
-                            <td>Action</td>
+                            <td>Actions</td>
                         </tr>
                     </thead>
                     <tbody>
@@ -66,8 +66,8 @@ const Employee = () =>{
                                     <td>
                                         <div className="d-grid gap-2 d-md-flex">
                                             <Link 
-                                            className="btn btn primary" 
-                                            to={"/employees/edit/${employee.employeeId}"}>Update</Link>
+                                            className="btn btn-primary" 
+                                            to={`/myfirstreact/employees/edit/${employee.employeeId}`}>Update</Link>
                                             <button 
                                             className="btn btn danger" onClick={() =>deleteEmployee(employee.employee.Id)}>Delete</button>
                                         </div>

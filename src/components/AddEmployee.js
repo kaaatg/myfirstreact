@@ -37,7 +37,7 @@ const AddEmployee = () => {
             .then(
                 response => {
                     console.log('Updated employee!', response.data);
-                    navigate('/employee')
+                    navigate('/employees')
                 }
             )
 
@@ -50,17 +50,17 @@ const AddEmployee = () => {
         
         else{
             const employee = {name, location, department};
-            employeeService.postEmployee(employeeId)
+            employeeService.postEmployee(employee)
             .then(
                 response => {
                     console.log('Employee added!');
-                    navigate('/employee');
+                    navigate('/employees');
                 }
             )
 
             .catch(
                 error => {
-                    console.log('something went wrong >:(');
+                    console.log('something went wrong >:(', error);
                 }
             )
         }
@@ -76,7 +76,7 @@ return(
                 type="text" 
                 className="form-control"
                 id="nameField" 
-                placeholder="Add employee name"
+                placeholder="Input employee name"
                 onChange={
                     (e) => {
                        setName(e.target.value);
@@ -91,7 +91,7 @@ return(
                 type="text" 
                 className="form-control"
                 id="locationField" 
-                placeholder="Add employee location"
+                placeholder="Input employee location"
                 onChange={
                     (e) => {
                         setLocation(e.target.value);
@@ -106,7 +106,7 @@ return(
                 type="text" 
                 className="form-control"
                 id="departmentField" 
-                placeholder="Add employee department"
+                placeholder="Input employee department"
                 onChange={
                     (e) => {
                         setDepartment(e.target.value);
