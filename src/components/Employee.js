@@ -65,7 +65,7 @@ const Employee = () =>{
                                     <td>{employee.location}</td>
                                     <td>{employee.department}</td>
                                     <td>
-                                        <div className="d-grid gap-2 d-md-flex">
+                                        <div className="d-grid gap-2 d-md-flex justify-content-center">
                                             <Link 
                                             className="btn btn-primary" 
                                             to={`/myfirstreact/employees/edit/${employee.employeeId}`}>Update</Link>

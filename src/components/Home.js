@@ -1,10 +1,11 @@
 import logo from '../logo.svg';
+
 import Greet from './Greet';
 import Button from './Button';
 import TypeWriterEffect from 'react-typewriter-effect';
 import Hello from './Hello';
 import Employee from './Employee';
-import NavBar from './NavBar';
+import Nav from './Nav';
 
 function Home() {
   return (
