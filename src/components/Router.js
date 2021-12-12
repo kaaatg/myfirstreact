@@ -9,15 +9,15 @@ const Router = () => {
             <div>
                 <BrowserRouter>
                     <Routes>
-                        <Route exact path="/" element={<Home/>}/>
-                        <Route exact path="/employees" element={<Employee/>}/>
-                        <Route exact path="/add" element={<AddEmployee/>}/>
-                        <Route exact path="/employees/edit/:employeeId" element={<AddEmployee/>}/>
+                        <Route exact path="/myfirstreact" element={<Home/>}/>
+                        <Route exact path="/myfirstreact/employees" element={<Employee/>}/>
+                        <Route exact path="/myfirstreact/add" element={<AddEmployee/>}/>
+                        <Route exact path="/myfirstreact/employees/edit/:employeeId" element={<AddEmployee/>}/>
                         <Route exact path="*" element={<PageNotFound/>}/>
                     </Routes>
                 </BrowserRouter>
             </div>
-    )
-}
+    );
+};
 
 export default Router

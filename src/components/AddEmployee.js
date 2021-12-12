@@ -24,9 +24,9 @@ const AddEmployee = () => {
                 error =>{
                     console.error("Something went wrong >:(", error);
                 }
-            )
+            );
         }   
-    },[])
+    },[]);
     
     const saveEmployee = (e) => {
         e.preventDefault();
@@ -37,7 +37,7 @@ const AddEmployee = () => {
             .then(
                 response => {
                     console.log('Updated employee!', response.data);
-                    navigate('/employees')
+                    navigate('/myfirstreact/employees');
                 }
             )
 
@@ -45,7 +45,7 @@ const AddEmployee = () => {
                 error => {
                     console.error('Something went wrong >:(', error);
                 }
-            )    
+            );    
         }
         
         else{
@@ -53,8 +53,8 @@ const AddEmployee = () => {
             employeeService.postEmployee(employee)
             .then(
                 response => {
-                    console.log('Employee added!');
-                    navigate('/employees');
+                    console.log('Employee added!', response.data);
+                    navigate('/myfirstreact/employees');
                 }
             )
 
@@ -62,8 +62,13 @@ const AddEmployee = () => {
                 error => {
                     console.log('something went wrong >:(', error);
                 }
-            )
+            );
         }
+    };
+    
+    else {
+        console.error('Kindly fill up each entry');
+        setError('Kindly fill up each entry');
     }
 
 return(
@@ -75,6 +80,7 @@ return(
                 <input 
                 type="text" 
                 className="form-control"
+                value={name}
                 id="nameField" 
                 placeholder="Input employee name"
                 onChange={
@@ -90,6 +96,7 @@ return(
                 <input 
                 type="text" 
                 className="form-control"
+                value={location}
                 id="locationField" 
                 placeholder="Input employee location"
                 onChange={
@@ -105,6 +112,7 @@ return(
                 <input 
                 type="text" 
                 className="form-control"
+                value={department}
                 id="departmentField" 
                 placeholder="Input employee department"
                 onChange={
@@ -114,13 +122,16 @@ return(
                 }
                 />
             </div>
-            <button type="submit" 
+            <button 
+            type="submit" 
             className="btn btn-primary" 
             onClick={(e) => saveEmployee(e)}>Save
             </button>
+            
+    <p id="error">{error && <p className="error">{error}</p>}</p>
         </form>
     </div>
-)
-}
+);
+};
 
 export default AddEmployee

@@ -23,8 +23,8 @@ const Employee = () =>{
             err =>{
                 console.log("Something went wrong >:(");
             }
-        )
-    }
+        );
+    };
     
     const deleteEmployee = (employeeId) =>{
         employeeService.deleteEmployee(employeeId)
@@ -39,8 +39,8 @@ const Employee = () =>{
             error =>{
                 console.error("Something went wrong >:(", error);
             }
-        )
-    }
+        );
+    };
     
     return(
             <div className="container">
@@ -68,8 +68,9 @@ const Employee = () =>{
                                             <Link 
                                             className="btn btn-primary" 
                                             to={`/myfirstreact/employees/edit/${employee.employeeId}`}>Update</Link>
-                                            <button 
-                                            className="btn btn danger" onClick={() =>deleteEmployee(employee.employee.Id)}>Delete</button>
+                                            
+                                            <div 
+                                            className="btn btn-danger" onClick={() =>deleteEmployee(employee.employeeId)}>Delete</div>
                                         </div>
                                     </td>
                                 </tr>
@@ -80,7 +81,7 @@ const Employee = () =>{
                 </table>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default Employee
