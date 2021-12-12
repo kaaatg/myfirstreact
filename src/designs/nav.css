@@ -1,5 +1,5 @@
-nav {
-    background-color: rgb(147, 123, 191);
+#nav {
+    background: rgb(147, 123, 191);
 }
 
 a {
