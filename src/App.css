@@ -1,5 +1,14 @@
 .App {
   text-align: center;
+  background-image: url('https://wallpaperaccess.com/full/2641074.gif');
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  font-weight: 700;
+  color: white;
 }
 
 .App-logo {
@@ -13,18 +22,6 @@
   }
 }
 
-.App-header {
-  background-image: url('https://wallpaperaccess.com/full/2641074.gif');
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  font-weight: 700;
-  color: white;
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -32,4 +29,30 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+#employee {
+    font-size: 20px;
+    color: white;
+    margin: -20px 2 1 1;
+    line-height: 30px;
+}
+
+#employee h3 {
+    font-size: 40px;
+    color: white;
+    margin-bottom: 0.80cm;        
+}
+
+#employee td {
+    font-size: 20px;
+    padding: 5px 45px 5px 45px;
+}
+
+#employee tr:nth-child(even) {
+    background: rgba(143, 110, 130, 0.514);
+}
+
+#employee tr:nth-child(1) {
+    background: rgb(147, 123, 191);
 }

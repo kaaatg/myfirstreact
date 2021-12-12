@@ -10,7 +10,6 @@ import Nav from './Nav';
 function Home() {
   return (
     <div className="Home">
-      <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <TypeWriterEffect
         textStyle={{
@@ -25,7 +24,6 @@ function Home() {
           'Hey there, everyone :)',
           'This is made by Katrina',
           'Welcome to my React',
-          'and hello Spring Boot!',
           'Hope yall liked it, UWU',
         ]}
         multiTextDelay={1500}
@@ -39,7 +37,6 @@ function Home() {
           rel="noopener noreferrer"
         >
         </a>
-      </header>
     </div>
   );
 }

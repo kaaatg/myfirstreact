@@ -1,8 +1,6 @@
 import {useEffect, useState} from "react"
 import {Link} from "react-router-dom"
 import employeeService from "../services/employeeService"
-import '../designs/Employee.css'; 
-
 
 const Employee = () =>{
     
@@ -44,19 +42,14 @@ const Employee = () =>{
     };
     
     return(
-            <div className="container">
+            <div id="employee">
             <h3>List of Employees</h3>
             <div>
-                <table className="table table-hover table-light table-striped">
-                    <thead>
-                        <tr className="table-primary">
+                <table border="1.5">
                             <td>Name</td>
                             <td>Location</td>
                             <td>Department</td>
                             <td>Actions</td>
-                        </tr>
-                    </thead>
-                    <tbody>
                     {
                         employees.map(
                             employee => (
@@ -78,7 +71,6 @@ const Employee = () =>{
                             )
                         )
                     }
-                    </tbody>
                 </table>
             </div>
         </div>
