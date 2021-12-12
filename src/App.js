@@ -1,6 +1,6 @@
 import './App.css';
 
-import Nav from './components/NavBar';
+import Nav from './components/Nav';
 import Home from './components/Home';
 import Router from './components/Router';
 
