@@ -1,3 +1,5 @@
+import '../designs/NavBar.css';
+
 const NavBar = () => {
     return(
             <div>
