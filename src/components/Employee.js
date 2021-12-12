@@ -1,7 +1,8 @@
 import {useEffect, useState} from "react"
 import {Link} from "react-router-dom"
 import employeeService from "../services/employeeService"
-import './Employee.css';
+import '../designs/Employee.css'; 
+
 
 const Employee = () =>{
     
