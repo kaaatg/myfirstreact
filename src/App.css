@@ -38,21 +38,29 @@
     line-height: 30px;
 }
 
-#employee h3 {
+#SaveField {
+    background: rgb(147, 123, 191);
+    border: none;
+    margin: 2px .25in 0 .25in;
+}
+
+h3 {
     font-size: 40px;
     color: white;
-    margin-bottom: 0.80cm;        
+    margin-bottom: 0.80cm;   
 }
 
-#employee td {
+td {
     font-size: 20px;
     padding: 5px 45px 5px 45px;
+    
 }
 
-#employee tr:nth-child(even) {
+
+tr:nth-child(odd) {
     background: rgba(143, 110, 130, 0.514);
 }
 
-#employee tr:nth-child(1) {
+tr:nth-child(1) {
     background: rgb(147, 123, 191);
 }

@@ -60,11 +60,11 @@ const Employee = () =>{
                                     <td>
                                         <div className="d-grid gap-2 d-md-flex justify-content-center">
                                             <Link 
-                                            className="btn btn-primary" 
+                                            className="btn btn-outline-info" 
                                             to={`/myfirstreact/employees/edit/${employee.employeeId}`}>Update</Link>
                                             
                                             <div 
-                                            className="btn btn-danger" onClick={() =>deleteEmployee(employee.employeeId)}>Delete</div>
+                                            className="btn btn-outline-warning" onClick={() =>deleteEmployee(employee.employeeId)}>Delete</div>
                                         </div>
                                     </td>
                                 </tr>

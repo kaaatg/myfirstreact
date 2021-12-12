@@ -8,7 +8,7 @@ const AddEmployee = () => {
     const [department, setDepartment] = useState("");
     const [error, setError] = useState("");
     const navigate = useNavigate();
-    const { employeeId } = useParams();
+    const {employeeId} = useParams();
 
     useEffect(() => {
         if (employeeId) {
@@ -36,7 +36,7 @@ const AddEmployee = () => {
             setError('');
 
             if (employeeId) {
-                const employee = { employeeId, name, location, department };
+                const employee = {employeeId, name, location, department};
                 employeeService.putEmployee(employee)
                     .then(
                         response => {
@@ -53,7 +53,7 @@ const AddEmployee = () => {
             }
 
             else {
-                const employee = { name, location, department };
+                const employee = {name, location, department};
                 employeeService.postEmployee(employee)
                     .then(
                         response => {
@@ -89,7 +89,7 @@ const AddEmployee = () => {
                         className="form-control"
                         value={name}
                         id="nameField"
-                        placeholder="Input employee name"
+                        placeholder="Input name"
                         onChange={
                             (e) => {
                                 setName(e.target.value);
@@ -105,7 +105,7 @@ const AddEmployee = () => {
                         className="form-control"
                         value={location}
                         id="locationField"
-                        placeholder="Input employee location"
+                        placeholder="Input location"
                         onChange={
                             (e) => {
                                 setLocation(e.target.value);
@@ -121,7 +121,7 @@ const AddEmployee = () => {
                         className="form-control"
                         value={department}
                         id="departmentField"
-                        placeholder="Input employee department"
+                        placeholder="Input department"
                         onChange={
                             (e) => {
                                 setDepartment(e.target.value);
@@ -132,6 +132,7 @@ const AddEmployee = () => {
                 <button
                     type="submit"
                     className="btn btn-primary"
+                    id="SaveField"
                     onClick={(e) => saveEmployee(e)}>Save
                 </button>
 
