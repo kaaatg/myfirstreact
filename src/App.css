@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-image: url('https://wallpaperaccess.com/full/2641074.gif');
+  background-image: url('https://data.whicdn.com/images/327124051/original.gif?t=1550971622');
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -56,11 +56,6 @@ td {
     
 }
 
-
 tr:nth-child(odd) {
     background: rgba(143, 110, 130, 0.514);
-}
-
-tr:nth-child(1) {
-    background: rgb(147, 123, 191);
 }

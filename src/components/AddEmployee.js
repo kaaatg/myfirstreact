@@ -71,8 +71,8 @@ const AddEmployee = () => {
         }
 
         else {
-            console.error('Kindly fill up each entry');
-            setError('Kindly fill up each entry');
+            console.error('Kindly fill out each entry');
+            setError('Kindly fill out each entry');
         }
     };
 
