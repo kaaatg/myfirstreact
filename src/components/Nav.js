@@ -2,8 +2,8 @@ import '../designs/Nav.css';
 
 const Nav = () => {
     return(
-            <div id="nav">
-                <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <div>
+                <nav className="navbar fixed-top navbar-expand-lg navbar-dark" id="nav">
                     <div className="container-fluid">
                         <a className="navbar-brand" href="#">BLΛƆ KPIИK</a>
                         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
